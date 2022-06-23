@@ -1,0 +1,23 @@
+fun main() {
+    val firstDice = Dice(6)
+    println("Your ${firstDice.numSides} sided dice rolled on the side ${firstDice.roll()}.")
+    
+    val secDice = Dice(20)
+    println("Your ${firstDice.numSides} sided dice rolled on the side ${secDice.roll()}.")
+    
+    val coin = Coin()
+    println("A coin was flipped and you landed on ${coin.flip()} with 1 being heads and 0 being tails.")
+}
+
+class Dice(val numSides: Int) {
+    
+    fun roll(): Int {
+        return (1..numSides).random()
+    }
+}
+
+class Coin {
+    fun flip(): Int {
+        return (0..1).random()
+    }
+}
